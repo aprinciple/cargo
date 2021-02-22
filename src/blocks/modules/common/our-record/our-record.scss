@@ -1,0 +1,137 @@
+.our-record {
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: $light-blue;
+    text-transform: uppercase;
+
+    @media (min-width: $lg) {
+      margin-bottom: 15px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $xxl) {
+      margin-bottom: 20px;
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000;
+
+    @media (min-width: $lg) {
+      line-height: 20px;
+    }
+
+    @media (min-width: $xxl) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    margin-right: -15px;
+  }
+
+  &__slider-nav {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    column-gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  &__slider-button {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__slider-button--prev {
+    background-image: url('../img/arrow-prev.svg');
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__slider-button--next {
+    background-image: url('../img/arrow-next.svg');
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &__slider-wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    column-gap: 15px;
+    width: 100%;
+    padding-bottom: 20px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+
+    &::-webkit-scrollbar {
+      height: 9px;
+      border-radius: 6px;
+      background-color: rgba(212, 192, 69, 0.15);
+    }
+    
+    &::-webkit-scrollbar-track {
+      border-radius: 6px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 6px;
+      background-color: $yellow;
+    } 
+
+    &::scrollbar-color {
+      background-color: $yellow;
+    }
+  }
+
+  &__slide {
+    max-width: 290px;
+    min-width: 290px;
+    height: 235px;
+    border-radius: 9px;
+    overflow: hidden;
+
+    @media (min-width: $lg) {
+      max-width: 350px;
+      min-width: 350px;
+      height: 260px;
+    }
+
+    @media (min-width: $xl) {
+      max-width: 400px;
+      min-width: 400px;
+      height: 320px;
+    }
+
+    @media (min-width: $xxl) {
+      max-width: 440px;
+      min-width: 440px;
+      height: 360px;
+    }
+  }
+
+  &__slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__slider-cap {
+    min-width: 0.01em;
+  }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Cargo</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body class="page p-contacts">
+  <header class="header">
+    <div class="container header__wrapper">
+      <a class="logo" href="/index.html">
+        <img class="logo__image" src="img/logo.svg" alt="Index Cargo" />
+      </a>
+
+      <nav id="nav" class="menu">
+        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"></button>
+        <ul id="menu__list" class="menu__list">
+          <li class="menu__headline">
+            Menu
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="/index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/about-us.html">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__toggle-sublist" href="#">Перевозки</a>
+            <ul class="menu__sublist">
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-air.html">Авиа перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-auto.html">Авто перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-ship.html">Морские перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/service.html">Ж/д перевозки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/contacts.html">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="button button--red menu__aog" href="/aog.html">AOG</a>
+          </li>
+          <li class="menu__item menu__order">
+            <a id="menu__order" class="button" href="#online-order">Онлайн заявка</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page__main p-contacts__main">
+    <div class="container">
+      <div class="p-contacts__promo">
+        <h1 class="p-contacts__title">Есть вопросы?</h1>
+        <p class="p-contacts__subtitle">Пишите нам</p>
+      </div>
+      <div class="p-contacts__items">
+        <form class="form p-contacts__form" data-form="post" action="php/form.php" method="POST">
+          <p class="form__legend">Заполните форму и мы перезвоним вам</p>
+          <label class="form__label">
+            <span class="form__label-text">Ваше имя</span>
+            <input class="form__input" type="text" name="name" placeholder="Александр" required>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">Телефон</span>
+            <input class="form__input" type="tel" name="phone" placeholder="+7" required>
+          </label>
+          <label class="form__label">
+            <span class="form__label-text">E-mail</span>
+            <input class="form__input" type="email" name="mail" placeholder="mail@gmail.com">
+          </label>
+          <p class="form__agreement">
+            Нажимая кнопку «Отправить» Вы даете согласие на обработку персональных данных
+          </p>
+          <span class="form__notification"></span>
+          <button type="submit" class="button form__button">Отправить</button>
+        </form>
+        <div class="contact">
+          <div class="contact__wrapper">
+            <h5 class="contact__title">Контакты</h5>
+            <h6 class="contact__tagline">
+              Логистическая компания Index Cargo
+            </h6>
+            <p class="contact__item">
+              <b>Ростов-на-Дону</b>
+              пр.Шолохова, 34А
+            </p>
+            <p class="contact__item">
+              <b>Москва</b>
+              Домодедово,<br>
+      мкр. Авиационный,<br>
+      ул. Ильюшина, 2А
+            </p>
+            <div class="contact__social">
+              <div class="social">
+                <span class="social__text">Social:</span>
+                <a class="social__link social__link--im" href="#" aria-label="Instagram"></a>
+                <a class="social__link social__link--vk" href="#" aria-label="Vkontakte"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__wrapper">
+      <img class="footer__logo" src="img/logo-footer.svg" alt="Index Cargo — перевозки по всему миру" />
+      <div class="menu footer__menu">
+        <ul class="menu__list footer__menu-list">
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="/index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/about-us.html">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__toggle-sublist" href="#">Перевозки</a>
+            <ul class="menu__sublist footer__menu-sublist">
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-air.html">Авиа перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-auto.html">Авто перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-ship.html">Морские перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/service.html">Ж/д перевозки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/contacts.html">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="button button--red menu__aog footer__menu-aog" href="/aog.html">AOG</a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer__copyright">Copyright &copy; 2021 IndexCargo</p>
+    </div>
+  </footer>
+
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

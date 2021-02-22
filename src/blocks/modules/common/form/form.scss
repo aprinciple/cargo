@@ -1,0 +1,211 @@
+.form {
+  display: grid;
+  padding: 20px 20px;
+  background-color: #fff;
+  box-shadow: 0 12px 19px rgba(0, 0, 0, 0.11);
+  
+  @media (min-width: $lg) {
+    padding: 30px 30px;
+  }
+
+  @media (min-width: $xl) {
+    padding: 35px 40px;
+  }
+
+  @media (min-width: $xxl) {
+    padding: 55px 65px;
+  }
+
+  &__legend {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 20px;
+    color: $blue;
+
+    @media (min-width: $xl) {
+      width: 60%;
+    }
+
+    @media (min-width: $xxl) {
+      margin-bottom: 30px;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  &__label {
+    display: grid;
+    row-gap: 5px;
+
+    @media (min-width: $xxl) {
+      row-gap: 10px;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+
+      @media (min-width: $xxl) {
+        margin-bottom: 55px;
+      }
+    }
+  }
+
+  &__label-text {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: $blue;
+    user-select: none;
+
+    @media (min-width: $xl) {
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    @media (min-width: $xxl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__input {
+    height: 22px;
+    padding-right: 10px;
+    border: 0;
+    border-bottom: 2px solid $blue;
+    outline: none;
+    font-size: 16px;
+    transition: border-color 0.3s;
+
+    @media (min-width: $lg) {
+      height: 30px;
+    }
+
+    @media (min-width: $xxl) {
+      height: 35px;
+      font-size: 22px;
+    }
+
+    &::placeholder {
+      font-size: 16px;
+      line-height: 18px;
+      color: $gray;
+
+      @media (min-width: $xxl) {
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+
+    &:focus {
+      border-bottom-color: $yellow;
+    }
+  }
+
+  &__radio,
+  &__checkbox {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    align-items: center;
+    column-gap: 10px;
+    user-select: none;
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__radio-text,
+  &__checkbox-text {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+  }
+
+  &__radio-input,
+  &__checkbox-input {
+    @include hidden;
+  }
+
+  &__radio-check,
+  &__checkbox-check {
+    order: -1;
+    display: grid;
+    place-items: center;
+    width: 21px;
+    height: 21px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 4, 110, 0.14);
+  }
+
+  &__radio-input:checked + &__radio-check::after,
+  &__checkbox-input:checked +  &__checkbox-check::after {
+    content: '';
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: $light-blue;
+  }
+
+  &__agreement {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000;
+
+    @media (min-width: $xxl) {
+      margin-top: 45px;
+      margin-bottom: 30px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &__notification {
+    display: none;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    border-left: 3px solid green;
+    font-size: 14px;
+    line-height: 16px;
+    animation: fade-in 0.7s;
+
+    @media (min-width: $lg) {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $xxl) {
+      margin-bottom: 25px;
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__notification--success {
+    display: block;
+    border-color: #008546;
+    color: #008546;
+  }
+
+  &__notification--error {
+    display: block;
+    border-color: $red;
+    color: $red;
+  }
+
+  &__button {
+    justify-self: center;
+    padding: 11px 45px;
+    outline: 0;
+  }
+}

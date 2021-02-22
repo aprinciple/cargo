@@ -1,0 +1,27 @@
+.menu--white {
+
+  & .menu__item {
+
+    @media (min-width: $lg) {
+      color: #fff;
+    }
+  }
+
+  & .menu__link {
+    @media (min-width: $lg) {
+      color: #fff;
+    }
+  }
+
+  & .menu__link--active {
+    color: $red;
+  }
+
+  & .menu__sublist .menu__link {
+    color: $light-blue;
+  }
+
+  & .menu__toggle-sublist::after {
+    background-image: url('../img/arrow-down--white.svg');
+  }
+}

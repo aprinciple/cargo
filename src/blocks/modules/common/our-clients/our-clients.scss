@@ -1,0 +1,109 @@
+.our-clients {
+
+  @media (min-width: $md) {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    column-gap: 20px;
+  }
+
+  @media (min-width: $lg) {
+    grid-template-columns: 1fr 545px;
+    column-gap: 50px;
+  }
+
+  @media (min-width: $xl) {
+    grid-template-columns: 1fr 600px;
+    column-gap: 100px;
+  }
+
+  @media (min-width: $xxl) {
+    grid-template-columns: 1fr 915px;
+    column-gap: 150px;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: $light-blue;
+    text-transform: uppercase;
+
+    @media (min-width: $lg) {
+      margin-bottom: 15px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $xxl) {
+      margin-bottom: 20px;
+      font-size: 48px;
+      line-height: 56px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #000;
+
+    @media (min-width: $lg) {
+      line-height: 20px;
+    }
+
+    @media (min-width: $xxl) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1px;
+    background-color: $gray;
+    border: 1px solid $gray;
+    margin: 0 -15px;
+
+    @media (min-width: $sm) {
+      margin: 0;
+    }
+
+    @media (min-width: $md) {
+      grid-row: 1 / span 3;
+      grid-column: 2 / 3;
+    }
+  }
+
+  &__item {
+    display: grid;
+    place-items: center;
+    height: 70px;
+    background-color: #fff;
+    transition: transform 0.3s;
+    // -webkit-font-smoothing: subpixel-antialiased;
+    transform: translateZ(0);
+
+    @media (min-width: $sm) {
+      height: 100px;
+    }
+
+    @media (min-width: $xl) {
+      height: 120px;
+    }
+
+    @media (min-width: $xxl) {
+      height: 175px;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__image {
+    margin: 20px;
+  }
+}

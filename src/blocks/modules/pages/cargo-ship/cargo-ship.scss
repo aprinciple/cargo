@@ -1,0 +1,49 @@
+.p-cargo-ship {
+
+  &__advantages-cargo {}
+
+  &__advantages-cargo-image {
+    width: 250px;
+    margin-bottom: 20px;
+
+    @media (min-width: $sm) {
+      width: 330px;
+      height: 230px;
+    }
+
+    @media (min-width: $md) {
+      right: -50px;
+      margin: 0;
+    }
+
+    @media (min-width: $lg) {
+      width: 410px;
+      height: 280px;
+      // right: -px;
+    }
+
+    @media (min-width: $xl) {
+      right: -100px;
+      width: 450px;
+      height: 300px;
+    }
+
+    @media (min-width: $xxl) {
+      right: -130px;
+      width: 775px;
+      height: 550px;
+    }
+  }
+
+  &__advantages-cargo-item-title {
+    max-width: 230px;
+    
+    @media (min-width: $lg) {
+      max-width: 350px;
+    }
+
+    @media (min-width: $xxl) {
+      max-width: 525px;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.contacts {
+  position: relative;
+  margin: 0 -15px;
+  padding-top: 350px;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @media (min-width: $sm) {
+    margin: 0 -18px;
+    padding-top: 450px;
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  @media (min-width: $md) {
+    display: grid;
+    height: 470px;
+    margin: 0 -24px;
+    padding-top: 0;
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+
+  @media (min-width: $lg) {
+    height: 500px;
+    margin: 0 -70px;
+  }
+
+  @media (min-width: $xxl) {
+    height: 910px;
+    margin: 0 -180px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 350px;
+    background-image: url('../img/bg-contacts.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    @media (min-width: $sm) {
+      height: 450px;
+    }
+
+    @media (min-width: $md) {
+      width: 70%;
+      height: 400px;
+    }
+
+    @media (min-width: $lg) {
+      width: 60%;
+      height: 440px;
+    }
+
+    @media (min-width: $xl) {
+      height: 455px;
+    }
+
+    @media (min-width: $xxl) {
+      height: 800px;
+    }
+  }
+
+  &__contact {
+    position: relative;
+    top: -55px;
+
+    @media (min-width: $md) {
+      position: absolute;
+      top: 30px;
+      right: 0;
+      width: 60%;
+    }
+    @media (min-width: $lg) {
+      top: 60px;
+      width: 50%;
+    }
+    @media (min-width: $xxl) {
+      top: 80px;
+    }
+  }
+}

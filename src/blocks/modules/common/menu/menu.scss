@@ -1,0 +1,204 @@
+.menu {
+
+  &__button {
+    position: relative;
+    z-index: 11;
+    display: block;
+    width: 27px;
+    height: 21px;
+    background-image: url('../img/hamburger.svg');
+    background-size: 100% 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
+
+  &__button--open {
+    width: 18px;
+    height: 18px;
+    background-image: url('../img/close.svg');
+  }
+
+  &__headline {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 26px;
+    color: $gray;
+    text-transform: uppercase;
+    
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
+
+  &__list {
+    display: none;
+    @include reset-list;
+
+    @media (min-width: $lg) {
+      display: grid;
+      grid-auto-flow: column;
+      justify-content: end;
+      align-items: center;
+      column-gap: 25px;
+    }
+
+    @media (min-width: $lg) {
+      column-gap: 30px;
+    }
+
+    @media (min-width: $xxl) {
+      column-gap: 60px;
+    }
+  }
+
+  &__list--open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: $light-gray;
+    display: grid;
+    align-content: start;
+    justify-content: start;
+    row-gap: 25px;
+    width: 100%;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    padding-top: 80px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-shadow: 0 0 0 calc( 100vh - var(--vh, 1vh) * 100 ) $light-gray;
+    animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  &__item {
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: $blue;
+
+    @media (min-width: $lg) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    @media (min-width: $xxl) {
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+  &__link {
+    position: relative;
+    color: $blue;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover:not(.menu__toggle-sublist) {
+      color: $red;
+    }
+  }
+
+  &__link--active {
+    color: $red;
+  }
+
+  &__toggle-sublist {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -15px;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 6px;
+      background-image: url('../img/arrow-down.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      @media (min-width: $xxl) {
+        width: 15px;
+        height: 9px;
+        right: -25px;
+      }
+    }
+
+    &--active::after {
+      transform: rotate(90deg);
+      transform-origin: center top;
+      transition: transform 0.3s;
+    }
+  }
+
+  &__sublist {
+    display: none;
+    @include reset-list;
+  }
+
+  &__sublist {
+    display: none;
+    row-gap: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+
+    @media (min-width: $lg) {
+      position: absolute;
+      top: 30px;
+      left: -15px;
+      z-index: 10;
+      width: 183px;
+      padding: 10px 15px;
+      background-color: #fff;
+      border-radius: 13px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (min-width: $xxl) {
+      top: 40px;
+      left: -20px;
+      width: 260px;
+      padding: 18px 20px;
+    }
+  }
+
+  &__toggle-sublist--active + &__sublist {
+    display: grid;
+  }
+
+  &__aog {
+    padding: 9px 20px;
+    font-weight: 600;
+    font-size: 20px;
+
+    @media (min-width: $xxl) {
+      margin-right: -30px;
+    }
+  }
+
+  &__order {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    justify-content: center;
+    width: 100%;
+
+    @media (min-width: $lg) {
+      position: static;
+      bottom: auto;
+      left: auto;
+      display: inline-grid;
+      width: auto;
+      transform: translateX(0);
+    }
+  }
+}

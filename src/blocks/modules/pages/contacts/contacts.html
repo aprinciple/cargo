@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index Cargo</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body class="page p-contacts">
+  @@include('../../common/header/header.html')
+  <main class="page__main p-contacts__main">
+    <div class="container">
+      <div class="p-contacts__promo">
+        <h1 class="p-contacts__title">Есть вопросы?</h1>
+        <p class="p-contacts__subtitle">Пишите нам</p>
+      </div>
+      <div class="p-contacts__items">
+        @@include('./form/form.html')
+        @@include('../../common/contact/contact.html')
+      </div>
+    </div>
+  </main>
+  @@include('../../common/footer/footer.html')
+  <script src="js/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Авто перевозки</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+<body class="page p-service p-cargo-auto">
+  <header class="header">
+    <div class="container header__wrapper">
+      <a class="logo" href="/index.html">
+        <img class="logo__image" src="img/logo.svg" alt="Index Cargo" />
+      </a>
+
+      <nav id="nav" class="menu">
+        <button class="menu__button" type="button" aria-expanded="false" aria-controls="menu__list"></button>
+        <ul id="menu__list" class="menu__list">
+          <li class="menu__headline">
+            Menu
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="/index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/about-us.html">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__toggle-sublist" href="#">Перевозки</a>
+            <ul class="menu__sublist">
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-air.html">Авиа перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-auto.html">Авто перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-ship.html">Морские перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/service.html">Ж/д перевозки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/contacts.html">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="button button--red menu__aog" href="/aog.html">AOG</a>
+          </li>
+          <li class="menu__item menu__order">
+            <a id="menu__order" class="button" href="#online-order">Онлайн заявка</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page__main">
+    <div class="container">
+      <div class="p-service__promo">
+        <div class="p-service__promo-item p-service__promo-item--text">
+          <h1 class="p-service__promo-title">Авто перевозки</h1>
+          <p class="p-service__promo-text">
+            Возим грузы, как по России, так и по всему миру.
+          </p>
+          <a class="button button--blue" href="#online-order">
+            Узнать цены
+          </a>
+        </div>
+        <div class="p-service__promo-item p-service__promo-item--image">
+          <img class="p-service__promo-image" src="img/service-cargo-auto-promo.jpg" alt="Авто перевозки" />
+        </div>
+      </div>
+      <div class="p-service__offices">
+        <div class="p-service__offices-info">
+          <p class="p-service__offices-tagline">
+            Автоперевозки являются нашим ведущим направлением, высокий сервис,
+            скорость и качество обслуживания для нас на первом месте.
+          </p>
+          <ul>
+            <li>
+              Наши офисы находятся в <b>Ростове-на-Дону</b> и <b>Москве</b>.
+              Офис и склад в Москве находятся в Домодедово.
+            </li>
+            <li>
+              Наша компания доставляет грузы разных категорий по России, а
+              также по другим странам мира.
+            </li>
+            <li>
+              У нас можно заказать полный комплекс транспортных и
+              логистических услуг.
+            </li>
+            <li>
+              Так же осуществляем доставку груза во все труднодоступные места.
+              В районы крайнего севера.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="stages p-service__stages"></div>
+      <div class="types-cargo">
+        <h2 class="types-cargo__title">Виды грузов для автоперевозок</h2>
+        <div class="types-cargo__wrapper">
+          <img class="types-cargo__image" src="img/types-cargo-auto.jpg" alt="Виды грузов для автоперевозок" />
+          <div class="types-cargo__item">
+            <h6 class="types-cargo__item-title">Вес, объем и габариты</h6>
+            <p class="types-cargo__item-text">
+              Общий вес и объем принимаемого к авиаперевозке груза не
+              ограничены, однако требуется дополнительное согласование, если
+              вес одного места равен или превышает 80 кг или один из
+              параметров (длина, ширина, высота) равен или превышает 0,8 м.
+            </p>
+          </div>
+          <div class="types-cargo__item">
+            <h6 class="types-cargo__item-title">
+              Предварительное согласование
+            </h6>
+            <p class="types-cargo__item-text">
+              Пожалуйста, ознакомьтесь со <a href="#">списком грузов</a>, не
+              принимаемых к авиаперевозке, и грузов, перевозка которых
+              подлежит предварительному согласованию.
+            </p>
+          </div>
+          <div class="types-cargo__item">
+            <h6 class="types-cargo__item-title">
+              Не принимаемые к перевозке
+            </h6>
+            <p class="types-cargo__item-text">
+              Пожалуйста, ознакомьтесь со <a href="#">списком грузов</a>, не
+              принимаемых к авиаперевозке, и грузов, перевозка которых
+              подлежит предварительному согласованию.
+            </p>
+          </div>
+          <div class="types-cargo__item">
+            <h6 class="types-cargo__item-title">Правильная упаковка</h6>
+            <p class="types-cargo__item-text">
+              Груз принимается к авиаперевозке только в закрытой упаковке,
+              ограничивающей доступ к содержимому. Вы можете доверить подбор
+              оптимальной упаковки для вашего груза нам.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="advantages-cargo p-cargo-auto__advantages-cargo">
+        <h2 class="advantages-cargo__title">Преимущества автоперевозок</h2>
+        <img class="advantages-cargo__image p-cargo-auto__advantages-cargo-image" src="img/advantages-cargo-auto.png" alt="Преимущества автоперевозок" />
+        <ul class="advantages-cargo__list">
+          <li class="advantages-cargo__list-item">
+            Универсальность. Современные автомобили могут перевозить почти
+            любые виды грузов;
+          </li>
+          <li class="advantages-cargo__list-item">
+            Возможность транспортировки «от двери до двери»;
+          </li>
+          <li class="advantages-cargo__list-item">
+            Самый мобильный вид перевозок;
+          </li>
+          <li class="advantages-cargo__list-item">Оперативность;</li>
+          <li class="advantages-cargo__list-item">
+            Надежность и возможность надзора;
+          </li>
+        </ul>
+        <div class="advantages-cargo__items">
+          <div class="advantages-cargo__item">
+            <h3 class="advantages-cargo__item-title">
+              Муждународные автоперевозки
+            </h3>
+            <picture class="advantages-cargo__item-picture">
+              <img class="advantages-cargo__item-image" src="img/advantages-international-auto.jpg" alt="Муждународные автоперевозки" />
+            </picture>
+          </div>
+          <div class="advantages-cargo__item">
+            <h3 class="advantages-cargo__item-title">
+              Автоперевозки по России
+            </h3>
+            <picture class="advantages-cargo__item-picture">
+              <img class="advantages-cargo__item-image" src="img/advantages-russia-auto.jpg" alt="Автоперевозки по России" />
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="service-cargo">
+      <div class="container service-cargo__wrapper">
+        <h2 class="service-cargo__title">
+          Комплексный сервис перевозки грузов автотранспортом
+        </h2>
+        <div class="service-cargo__items">
+          <div class="service-cargo__item">
+            <img class="service-cargo__item-image" src="img/service-cargo-image-1.svg" alt="Таможенное оформление" />
+            <h6 class="service-cargo__item-title">
+              Таможенное <br />
+                оформление
+            </h6>
+          </div>
+          <div class="service-cargo__item">
+            <img class="service-cargo__item-image" src="img/service-cargo-image-2.svg" alt="Мультимодальные перевозки" />
+            <h6 class="service-cargo__item-title">
+              Мультимодальные <br />
+                перевозки
+            </h6>
+          </div>
+          <div class="service-cargo__item">
+            <img class="service-cargo__item-image" src="img/service-cargo-image-3.svg" alt="Перевозка опасных грузов" />
+            <h6 class="service-cargo__item-title">
+              Перевозка <br />
+                опасных грузов
+            </h6>
+          </div>
+          <div class="service-cargo__item">
+            <img class="service-cargo__item-image" src="img/service-cargo-image-4.svg" alt="Хранение на складе" />
+            <h6 class="service-cargo__item-title">
+              Хранение <br />
+                на складе
+            </h6>
+          </div>
+          <div class="service-cargo__item">
+            <img class="service-cargo__item-image" src="img/service-cargo-image-5.svg" alt="Доставка грузов по всему миру" />
+            <h6 class="service-cargo__item-title">
+              Доставка грузов <br />
+                по всему миру
+            </h6>
+          </div>
+          <div class="service-cargo__item">
+            <img class="service-cargo__item-image" src="img/service-cargo-image-6.svg" alt="Упаковка и маркировка" />
+            <h6 class="service-cargo__item-title">
+              Упаковка <br />
+                и маркировка
+            </h6>
+          </div>
+          <div class="service-cargo__item">
+            <img class="service-cargo__item-image" src="img/service-cargo-image-7.svg" alt="Прямые поставки на производственную линию" />
+            <h6 class="service-cargo__item-title">
+              Прямые поставки на <br />
+                производственную линию
+            </h6>
+          </div>
+          <div class="service-cargo__item">
+            <img class="service-cargo__item-image" src="img/service-cargo-image-8.svg" alt="Страхование грузов" />
+            <h6 class="service-cargo__item-title">
+              Страхование <br />
+                грузов
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="other-types-cargo">
+      <div class="container other-types-cargo__wrapper">
+        <div class="other-types-cargo__promo">
+          <h2 class="other-types-cargo__title">Другие виды перевозок</h2>
+          <p class="other-types-cargo__tagline">
+            <b>перевозки</b> по всему миру
+          </p>
+        </div>
+        <div class="other-types-cargo__items">
+          <a class="other-types-cargo__item" href="#">
+            <div class="other-types-cargo__item-picture">
+              <img class="other-types-cargo__item-image" src="img/cargo-train.svg" alt="Железнодорожные перевозки" />
+              <img class="other-types-cargo__item-overlay" src="img/other-types-cargo-train.jpg" alt="Железнодорожные перевозки" />
+            </div>
+            <h6 class="other-types-cargo__item-title">
+              Железнодорожные <br />
+                перевозки
+            </h6>
+          </a>
+          <a class="other-types-cargo__item" href="#">
+            <div class="other-types-cargo__item-picture">
+              <img class="other-types-cargo__item-image" src="img/cargo-auto.svg" alt="Авто перевозки" />
+              <img class="other-types-cargo__item-overlay" src="img/other-types-cargo-auto.jpg" alt="Авто перевозки" />
+            </div>
+            <h6 class="other-types-cargo__item-title">
+              Авто <br />
+                перевозки
+            </h6>
+          </a>
+          <a class="other-types-cargo__item" href="#">
+            <div class="other-types-cargo__item-picture">
+              <img class="other-types-cargo__item-image" src="img/cargo-ship.svg" alt="Судоходные перевозки" />
+              <img class="other-types-cargo__item-overlay" src="img/other-types-cargo-ship.jpg" alt="Судоходные перевозки" />
+            </div>
+            <h6 class="other-types-cargo__item-title">
+              Судоходные <br />
+                перевозки
+            </h6>
+          </a>
+          <a class="other-types-cargo__item" href="#">
+            <div class="other-types-cargo__item-picture">
+              <img class="other-types-cargo__item-image" src="img/cargo-air.svg" alt="Авиа перевозки" />
+              <img class="other-types-cargo__item-overlay" src="img/other-types-cargo-air.jpg" alt="Авиа перевозки" />
+            </div>
+            <h6 class="other-types-cargo__item-title">
+              Авиа <br />
+                перевозки
+            </h6>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="p-service__request">
+      <div class="request">
+        <div id="online-order" class="container request__wrapper">
+          <div class="request__promo">
+            <h2 class="request__title">Онлайн заявка</h2>
+            <p class="request__subtitle">
+              Заполните форму и наш консультант свяжется с вами и поможет с расчётом
+            </p>
+          </div>
+          <form class="form request__form" data-form="post" action="php/request.php" method="POST">
+            <div class="request__form-fieldset">
+              <div class="request__form-group">
+                <span class="request__form-group-title">Маршрут</span>
+                <div class="request__form-group-wrapper">
+                  <label class="form__label request__form-label">
+                    <span class="form__label-text">Пункт отправления</span>
+                    <input class="form__input" type="text" name="departure" placeholder="Страна, город" required />
+                  </label>
+                  <label class="form__label request__form-label">
+                    <span class="form__label-text">Пункт прибытия</span>
+                    <input class="form__input" type="text" name="arrival" placeholder="Страна, город" required />
+                  </label>
+                </div>
+              </div>
+              <div class="request__form-fieldset-wrapper">
+                <div class="request__form-group">
+                  <span class="request__form-group-title">Тип перевозки</span>
+                  <label class="form__radio">
+                    <span class="form__radio-text">Авиаперевозка</span>
+                    <input class="form__radio-input" type="radio" name="type" value="Авиаперевозка" checked />
+                    <span class="form__radio-check"></span>
+                  </label>
+                  <label class="form__radio">
+                    <span class="form__radio-text">Автоперевозка</span>
+                    <input class="form__radio-input" type="radio" name="type" value="Автоперевозка" />
+                    <span class="form__radio-check"></span>
+                  </label>
+                  <label class="form__radio">
+                    <span class="form__radio-text">Ж/Д перевозка</span>
+                    <input class="form__radio-input" type="radio" name="type" value="Ж/Д перевозка" />
+                    <span class="form__radio-check"></span>
+                  </label>
+                  <label class="form__radio">
+                    <span class="form__radio-text">Судоходная перевозка</span>
+                    <input class="form__radio-input" type="radio" name="type" value="Судоходная перевозка" />
+                    <span class="form__radio-check"></span>
+                  </label>
+                  <label class="form__radio">
+                    <span class="form__radio-text">Мультимодальная</span>
+                    <input class="form__radio-input" type="radio" name="type" value="Мультимодальная" />
+                    <span class="form__radio-check"></span>
+                  </label>
+                </div>
+                <div class="request__form-group">
+                  <span class="request__form-group-title">Дополнительные услуги</span>
+                  <label class="form__checkbox">
+                    <span class="form__checkbox-text">Упаковка</span>
+                    <input class="form__checkbox-input" type="checkbox" name="services[]" value="Упаковка" checked />
+                    <span class="form__checkbox-check"></span>
+                  </label>
+                  <label class="form__checkbox">
+                    <span class="form__checkbox-text">Страхование</span>
+                    <input class="form__checkbox-input" type="checkbox" name="services[]" value="Страхование" />
+                    <span class="form__checkbox-check"></span>
+                  </label>
+                  <label class="form__checkbox">
+                    <span class="form__checkbox-text">Маркировка</span>
+                    <input class="form__checkbox-input" type="checkbox" name="services[]" value="Маркировка" />
+                    <span class="form__checkbox-check"></span>
+                  </label>
+                  <label class="form__checkbox">
+                    <span class="form__checkbox-text">Таможенное оформление</span>
+                    <input class="form__checkbox-input" type="checkbox" name="services[]" value="Таможенное оформление" />
+                    <span class="form__checkbox-check"></span>
+                  </label>
+                  <label class="form__checkbox">
+                    <span class="form__checkbox-text">Опасный груз</span>
+                    <input class="form__checkbox-input" type="checkbox" name="services[]" value="Опасный груз" />
+                    <span class="form__checkbox-check"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="request__form-group request__form-parameters">
+                <span class="request__form-group-title">Параметры груза</span>
+                <div class="request__form-group-wrapper">
+                  <label class="form__label request__form-label">
+                    <span class="form__label-text">Вес</span>
+                    <input class="form__input" type="text" name="weight" placeholder="30кг" required />
+                  </label>
+                  <label class="form__label request__form-label">
+                    <span class="form__label-text">Объем</span>
+                    <input class="form__input" type="text" name="size" placeholder="ДхШхВ" required />
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="request__form-fieldset">
+              <span class="form__legend request__form-legend">Контактные данные</span>
+              <label class="form__label request__form-contacts-label">
+                <span class="form__label-text">Ваше имя</span>
+                <input class="form__input" type="text" name="name" placeholder="Александр" required />
+              </label>
+              <label class="form__label request__form-contacts-label">
+                <span class="form__label-text">Телефон</span>
+                <input class="form__input" type="tel" name="phone" placeholder="+7" required />
+              </label>
+              <label class="form__label request__form-contacts-label">
+                <span class="form__label-text">E-mail</span>
+                <input class="form__input" type="email" name="mail" placeholder="mail@gmail.com" />
+              </label>
+              <p class="form__agreement request__form-contacts-agreement">
+                Нажимая кнопку «Отправить» Вы даете согласие на обработку персональных
+                данных
+              </p>
+              <span class="form__notification"></span>
+              <button type="submit" class="form__button request__form-submit">
+                Отправить
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div class="p-service__contacts">
+      <div class="container">
+        <div class="contacts">
+          <div class="contacts__contact">
+            <div class="contact">
+              <div class="contact__wrapper">
+                <h5 class="contact__title">Контакты</h5>
+                <h6 class="contact__tagline">
+                  Логистическая компания Index Cargo
+                </h6>
+                <p class="contact__item">
+                  <b>Ростов-на-Дону</b>
+                  пр.Шолохова, 34А
+                </p>
+                <p class="contact__item">
+                  <b>Москва</b>
+                  Домодедово,<br>
+      мкр. Авиационный,<br>
+      ул. Ильюшина, 2А
+                </p>
+                <div class="contact__social">
+                  <div class="social">
+                    <span class="social__text">Social:</span>
+                    <a class="social__link social__link--im" href="#" aria-label="Instagram"></a>
+                    <a class="social__link social__link--vk" href="#" aria-label="Vkontakte"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container footer__wrapper">
+      <img class="footer__logo" src="img/logo-footer.svg" alt="Index Cargo — перевозки по всему миру" />
+      <div class="menu footer__menu">
+        <ul class="menu__list footer__menu-list">
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="/index.html">Главная</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/about-us.html">О компании</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link menu__toggle-sublist" href="#">Перевозки</a>
+            <ul class="menu__sublist footer__menu-sublist">
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-air.html">Авиа перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-auto.html">Авто перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/cargo-ship.html">Морские перевозки</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="/service.html">Ж/д перевозки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="/contacts.html">Контакты</a>
+          </li>
+          <li class="menu__item">
+            <a class="button button--red menu__aog footer__menu-aog" href="/aog.html">AOG</a>
+          </li>
+        </ul>
+      </div>
+      <p class="footer__copyright">Copyright &copy; 2021 IndexCargo</p>
+    </div>
+  </footer>
+
+  <script src="js/script.min.js"></script>
+</body>
+
+</html>

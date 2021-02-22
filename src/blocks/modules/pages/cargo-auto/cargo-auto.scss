@@ -1,0 +1,42 @@
+.p-cargo-auto {
+
+  &__advantages-cargo {}
+
+  &__advantages-cargo-image {
+    width: 400px;
+    height: 100px;
+    margin: 0;
+    margin-left: auto;
+    margin-right: -15px;
+    margin-bottom: 20px;
+
+    @media (min-width: $sm) {
+      width: 500px;
+      height: 155px;
+      margin-right: -18px;
+    }
+
+    @media (min-width: $md) {
+      right: -245px;
+      margin: 0;
+    }
+
+    @media (min-width: $lg) {
+      width: 900px;
+      height: 280px;
+      right: -550px;
+    }
+
+    @media (min-width: $xl) {
+      width: 1100px;
+      height: 350px;
+      right: -685px;
+    }
+
+    @media (min-width: $xxl) {
+      right: -885px;
+      width: 1430px;
+      height: 465px;
+    }
+  }
+}

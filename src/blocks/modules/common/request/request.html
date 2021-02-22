@@ -1,0 +1,219 @@
+<div class="request">
+  <div id="online-order" class="container request__wrapper">
+    <div class="request__promo">
+      <h2 class="request__title">Онлайн заявка</h2>
+      <p class="request__subtitle">
+        Заполните форму и наш консультант свяжется с вами и поможет с расчётом
+      </p>
+    </div>
+    <form
+      class="form request__form"
+      data-form="post"
+      action="php/request.php"
+      method="POST"
+    >
+      <div class="request__form-fieldset">
+        <div class="request__form-group">
+          <span class="request__form-group-title">Маршрут</span>
+          <div class="request__form-group-wrapper">
+            <label class="form__label request__form-label">
+              <span class="form__label-text">Пункт отправления</span>
+              <input
+                class="form__input"
+                type="text"
+                name="departure"
+                placeholder="Страна, город"
+                required
+              />
+            </label>
+            <label class="form__label request__form-label">
+              <span class="form__label-text">Пункт прибытия</span>
+              <input
+                class="form__input"
+                type="text"
+                name="arrival"
+                placeholder="Страна, город"
+                required
+              />
+            </label>
+          </div>
+        </div>
+        <div class="request__form-fieldset-wrapper">
+          <div class="request__form-group">
+            <span class="request__form-group-title">Тип перевозки</span>
+            <label class="form__radio">
+              <span class="form__radio-text">Авиаперевозка</span>
+              <input
+                class="form__radio-input"
+                type="radio"
+                name="type"
+                value="Авиаперевозка"
+                checked
+              />
+              <span class="form__radio-check"></span>
+            </label>
+            <label class="form__radio">
+              <span class="form__radio-text">Автоперевозка</span>
+              <input
+                class="form__radio-input"
+                type="radio"
+                name="type"
+                value="Автоперевозка"
+              />
+              <span class="form__radio-check"></span>
+            </label>
+            <label class="form__radio">
+              <span class="form__radio-text">Ж/Д перевозка</span>
+              <input
+                class="form__radio-input"
+                type="radio"
+                name="type"
+                value="Ж/Д перевозка"
+              />
+              <span class="form__radio-check"></span>
+            </label>
+            <label class="form__radio">
+              <span class="form__radio-text">Судоходная перевозка</span>
+              <input
+                class="form__radio-input"
+                type="radio"
+                name="type"
+                value="Судоходная перевозка"
+              />
+              <span class="form__radio-check"></span>
+            </label>
+            <label class="form__radio">
+              <span class="form__radio-text">Мультимодальная</span>
+              <input
+                class="form__radio-input"
+                type="radio"
+                name="type"
+                value="Мультимодальная"
+              />
+              <span class="form__radio-check"></span>
+            </label>
+          </div>
+          <div class="request__form-group">
+            <span class="request__form-group-title">Дополнительные услуги</span>
+            <label class="form__checkbox">
+              <span class="form__checkbox-text">Упаковка</span>
+              <input
+                class="form__checkbox-input"
+                type="checkbox"
+                name="services[]"
+                value="Упаковка"
+                checked
+              />
+              <span class="form__checkbox-check"></span>
+            </label>
+            <label class="form__checkbox">
+              <span class="form__checkbox-text">Страхование</span>
+              <input
+                class="form__checkbox-input"
+                type="checkbox"
+                name="services[]"
+                value="Страхование"
+              />
+              <span class="form__checkbox-check"></span>
+            </label>
+            <label class="form__checkbox">
+              <span class="form__checkbox-text">Маркировка</span>
+              <input
+                class="form__checkbox-input"
+                type="checkbox"
+                name="services[]"
+                value="Маркировка"
+              />
+              <span class="form__checkbox-check"></span>
+            </label>
+            <label class="form__checkbox">
+              <span class="form__checkbox-text">Таможенное оформление</span>
+              <input
+                class="form__checkbox-input"
+                type="checkbox"
+                name="services[]"
+                value="Таможенное оформление"
+              />
+              <span class="form__checkbox-check"></span>
+            </label>
+            <label class="form__checkbox">
+              <span class="form__checkbox-text">Опасный груз</span>
+              <input
+                class="form__checkbox-input"
+                type="checkbox"
+                name="services[]"
+                value="Опасный груз"
+              />
+              <span class="form__checkbox-check"></span>
+            </label>
+          </div>
+        </div>
+        <div class="request__form-group request__form-parameters">
+          <span class="request__form-group-title">Параметры груза</span>
+          <div class="request__form-group-wrapper">
+            <label class="form__label request__form-label">
+              <span class="form__label-text">Вес</span>
+              <input
+                class="form__input"
+                type="text"
+                name="weight"
+                placeholder="30кг"
+                required
+              />
+            </label>
+            <label class="form__label request__form-label">
+              <span class="form__label-text">Объем</span>
+              <input
+                class="form__input"
+                type="text"
+                name="size"
+                placeholder="ДхШхВ"
+                required
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="request__form-fieldset">
+        <span class="form__legend request__form-legend">Контактные данные</span>
+        <label class="form__label request__form-contacts-label">
+          <span class="form__label-text">Ваше имя</span>
+          <input
+            class="form__input"
+            type="text"
+            name="name"
+            placeholder="Александр"
+            required
+          />
+        </label>
+        <label class="form__label request__form-contacts-label">
+          <span class="form__label-text">Телефон</span>
+          <input
+            class="form__input"
+            type="tel"
+            name="phone"
+            placeholder="+7"
+            required
+          />
+        </label>
+        <label class="form__label request__form-contacts-label">
+          <span class="form__label-text">E-mail</span>
+          <input
+            class="form__input"
+            type="email"
+            name="mail"
+            placeholder="mail@gmail.com"
+          />
+        </label>
+        <p class="form__agreement request__form-contacts-agreement">
+          Нажимая кнопку «Отправить» Вы даете согласие на обработку персональных
+          данных
+        </p>
+        <span class="form__notification"></span>
+        <button type="submit" class="form__button request__form-submit">
+          Отправить
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.header--white {
+
+  & .logo {
+    display: block;
+    
+    @media (min-width: $lg) {
+      display: none;
+    }
+  }
+
+  & .logo--white {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: block;
+    }
+  }
+}

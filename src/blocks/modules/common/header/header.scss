@@ -1,0 +1,26 @@
+.header {
+  position: relative;
+  z-index: 10;
+  background-color: $light-gray;
+
+  @media (min-width: $lg) {
+    padding-top: 30px;
+    background-color: transparent;
+  }
+
+  @media (min-width: $xxl) {
+    padding-top: 40px;
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+
+    @media (min-width: $lg) {
+      height: auto;
+    }
+  }
+}
