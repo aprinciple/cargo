@@ -134,6 +134,242 @@
     }
   }
 
+  &__offer {
+    margin-bottom: 35px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: $xl) {
+      display: grid;
+      grid-template-columns: 395px 1fr;
+      column-gap: 95px;
+      align-items: center;
+      margin-bottom: 100px;
+    }
+
+    @media (min-width: $xxl) {
+      grid-template-columns: 605px 1fr;
+      column-gap: 170px;
+      margin-bottom: 300px;
+    }
+  }
+
+  &__offer-content {
+
+  }
+
+  &__offer-title {
+    max-width: 240px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    color: $light-blue;
+    text-transform: uppercase;
+
+    @media (min-width: $lg) {
+      max-width: 300px;
+      font-size: 32px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $xxl) {
+      max-width: 100%;
+      margin-bottom: 45px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+  }
+
+  &__offer-text {
+    font-size: 16px;
+    line-height: 19px;
+    color: $blue;
+
+    @media (min-width: $xl) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $xxl) {
+      font-size: 30px;
+      line-height: 45px;
+    }
+  }
+
+  &__offer-slider {
+    position: relative;
+    margin-top: 25px;
+
+    @media (min-width: $xl) {
+      margin-top: 0;
+      margin-right: -70px;
+    }
+
+    @media (min-width: $xxl) {
+      margin-right: -180px;
+    }
+  }
+
+  &__offer-slides {
+    position: relative;
+  }
+
+  &__offer-slide {
+    position: relative;
+    height: 460px;
+
+    @media (min-width: $xl) {
+      height: 440px;
+    }
+
+    @media (min-width: $xxl) {
+      height: 670px;
+    }
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: rgba(0, 0, 0, 0.3);
+    // }
+  }
+
+  &__offer-slide-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__offer-slide-info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    @media (min-width: $sm) {
+      bottom: 25px;
+    }
+
+    @media (min-width: $xl) {
+      left: 40px;
+      bottom: 40px;
+    }
+
+    @media (min-width: $xxl) {
+      left: 60px;
+    }
+  }
+
+  &__offer-slide-title {
+    margin: 0;
+    margin-bottom: 10px;
+    padding-right: 70px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+
+    @media (min-width: $sm) {
+      padding-right: 20px;
+    }
+
+    @media (min-width: $md) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    @media (min-width: $lg) {
+      padding-right: 70px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 0;
+      padding-right: 40px;
+      font-size: 36px;
+      line-height: 40px;
+    }
+
+    @media (min-width: $xxl) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__offer-slide-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 18px;
+    color: #fff;
+
+    @media (min-width: $xl) {
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+
+  &__offer-slider-nav {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    z-index: 1;
+
+    @media (min-width: $sm) {
+      right: auto;
+      left: 170px;
+    }
+
+    @media (min-width: $md) {
+      left: 145px;
+    }
+
+    @media (min-width: $lg) {
+      left: 215px;
+    }
+
+    @media (min-width: $xl) {
+      left: 40px;
+      bottom: 115px;
+    }
+
+    @media (min-width: $xxl) {
+      left: 60px;
+    }
+  }
+
+  &__offer-slider-button {
+    width: 29px;
+    height: 29px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+    outline: 0;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__offer-slider-button--prev {
+    background-image: url('../img/prev.svg');
+  }
+
+  &__offer-slider-button--next {
+    background-image: url('../img/next.svg');
+  }
+
   &__about-us {
     padding-bottom: 30px;
 
@@ -580,22 +816,6 @@
       height: 1px;
       background-color: #fff;
     }
-  }
-
-  &__offer {
-    display: none;
-  }
-
-  &__offer-title {
-  }
-
-  &__offer-text {
-  }
-
-  &__offer-slider {
-  }
-
-  &__offer-slide {
   }
 
   &__services {
