@@ -4783,6 +4783,9 @@ body {
       line-height: 58px; } }
 
 .p-about-us__services-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
   display: grid;
   row-gap: 10px;
   margin-bottom: 30px;
