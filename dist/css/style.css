@@ -1716,9 +1716,11 @@ body {
       font-size: 20px;
       line-height: 24px; } }
 
-@media (min-width: 1600px) {
-  .p-home__about-us-button {
-    font-size: 20px; } }
+.p-home__about-us-button {
+  font-weight: bold; }
+  @media (min-width: 1600px) {
+    .p-home__about-us-button {
+      font-size: 20px; } }
 
 .p-home__about-us-items {
   display: grid;
@@ -2047,8 +2049,10 @@ body {
   margin-bottom: 30px; }
   @media (min-width: 992px) {
     .p-home__services-text {
+      display: grid;
       order: 0;
-      grid-row: span 2; } }
+      grid-row: span 2;
+      align-self: start; } }
 
 .p-home__services-text p {
   margin-bottom: 10px;
@@ -2064,23 +2068,63 @@ body {
   @media (min-width: 1600px) {
     .p-home__services-text p {
       margin-bottom: 25px;
-      font-size: 24px;
-      line-height: 28px; } }
+      font-size: 22px;
+      line-height: 26px; } }
 
-.p-home__services-text a {
+.p-home__services-link {
+  position: relative;
+  padding-right: 10px;
   font-weight: bold;
   font-size: 16px;
   line-height: 16px;
   color: #022086;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 0.3s; }
+  .p-home__services-link:hover {
+    color: #032cb8; }
+  .p-home__services-link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 6px;
+    height: 10px;
+    background-image: url("../img/home-services-arrow.svg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat; }
+    @media (min-width: 992px) {
+      .p-home__services-link::after {
+        top: calc(50% + 1px);
+        width: 7px;
+        height: 12px; } }
+    @media (min-width: 1200px) {
+      .p-home__services-link::after {
+        width: 9px;
+        height: 14px; } }
+    @media (min-width: 1600px) {
+      .p-home__services-link::after {
+        top: calc(50% + 5px);
+        width: 14px;
+        height: 24px; } }
+  @media (min-width: 992px) {
+    .p-home__services-link {
+      align-self: start;
+      justify-self: start;
+      order: -1;
+      margin-bottom: 15px;
+      padding-right: 18px; } }
   @media (min-width: 1200px) {
-    .p-home__services-text a {
-      font-size: 22px;
-      line-height: 22px; } }
+    .p-home__services-link {
+      margin-bottom: 25px;
+      padding-right: 20px;
+      font-size: 28px;
+      line-height: 30px; } }
   @media (min-width: 1600px) {
-    .p-home__services-text a {
-      font-size: 45px;
-      line-height: 55px; } }
+    .p-home__services-link {
+      padding-right: 40px;
+      font-size: 64px;
+      line-height: 64px; } }
 
 .p-home__services-items {
   display: grid;
@@ -4281,31 +4325,31 @@ body {
 .p-about-us__desc {
   display: grid;
   row-gap: 40px;
-  padding-top: 35px;
-  padding-bottom: 35px; }
+  padding-top: 35px; }
   @media (min-width: 768px) {
     .p-about-us__desc {
       grid-template-columns: 1fr 300px;
       -moz-column-gap: 30px;
            column-gap: 30px;
       row-gap: 0;
-      padding-bottom: 65px; } }
+      padding-bottom: 50px; } }
   @media (min-width: 992px) {
     .p-about-us__desc {
       grid-template-columns: 500px 385px;
       justify-content: space-between;
       -moz-column-gap: 0;
            column-gap: 0;
-      padding-top: 0;
-      padding-bottom: 90px; } }
+      padding-top: 0; } }
   @media (min-width: 1200px) {
     .p-about-us__desc {
-      grid-template-columns: 610px 450px;
-      padding-bottom: 90px; } }
+      grid-template-columns: 610px 450px; } }
   @media (min-width: 1600px) {
     .p-about-us__desc {
-      grid-template-columns: 800px 600px;
-      padding-bottom: 150px; } }
+      grid-template-columns: 800px 600px; } }
+
+@media (min-width: 768px) {
+  .p-about-us__desc--reverse {
+    align-items: center; } }
 
 @media (min-width: 768px) {
   .p-about-us__desc-content {
@@ -4314,6 +4358,10 @@ body {
 @media (min-width: 992px) {
   .p-about-us__desc-content {
     padding-top: 40px; } }
+
+@media (min-width: 768px) {
+  .p-about-us__desc-content--reverse {
+    order: 0; } }
 
 .p-about-us__desc-title {
   margin-bottom: 10px;
@@ -4327,6 +4375,9 @@ body {
       margin-bottom: 20px;
       font-size: 44px;
       line-height: 54px; } }
+  @media (min-width: 1600px) {
+    .p-about-us__desc-title {
+      margin-bottom: 25px; } }
 
 .p-about-us__desc-text {
   font-size: 14px;
@@ -4335,6 +4386,16 @@ body {
     .p-about-us__desc-text {
       font-size: 16px;
       line-height: 20px; } }
+  .p-about-us__desc-text:not(:last-child) {
+    margin-bottom: 10px; }
+    @media (min-width: 992px) {
+      .p-about-us__desc-text:not(:last-child) {
+        margin-bottom: 15px; } }
+    @media (min-width: 1600px) {
+      .p-about-us__desc-text:not(:last-child) {
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 22px; } }
 
 .p-about-us__desc ul {
   margin: 0;
@@ -4348,11 +4409,13 @@ body {
   @media (min-width: 992px) {
     .p-about-us__desc ul {
       margin-top: 20px;
-      margin-bottom: 35px;
+      margin-bottom: 20px;
       font-size: 16px;
       line-height: 20px; } }
 
 .p-about-us__desc-button {
+  margin-bottom: 40px;
+  justify-self: center;
   padding: 5px 25px;
   background: #EFF1F6;
   background: linear-gradient(145deg, #EFF1F6 0%, #fff 100%);
@@ -4360,9 +4423,20 @@ body {
   font-weight: 600;
   font-size: 20px;
   color: #022086; }
+  @media (min-width: 768px) {
+    .p-about-us__desc-button {
+      grid-column: span 2;
+      margin-top: 40px;
+      margin-bottom: 0; } }
   @media (min-width: 992px) {
     .p-about-us__desc-button {
+      margin-top: 50px;
+      margin-bottom: 50px;
       font-size: 22px; } }
+  @media (min-width: 1600px) {
+    .p-about-us__desc-button {
+      margin-top: 90px;
+      margin-bottom: 70px; } }
 
 .p-about-us__desc-images {
   position: relative;
@@ -4474,6 +4548,14 @@ body {
         top: 90px;
         width: 400px;
         height: 300px; } }
+
+@media (min-width: 1200px) {
+  .p-about-us__desc-image--reverse {
+    margin-right: -140px; } }
+
+@media (min-width: 1600px) {
+  .p-about-us__desc-image--reverse {
+    margin-right: -180px; } }
 
 .p-about-us__offices {
   display: grid; }
