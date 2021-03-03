@@ -336,6 +336,11 @@
       line-height: 20px;
     }
 
+    @media (min-width: $xxl) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 10px;
 
@@ -345,8 +350,6 @@
 
       @media (min-width: $xxl) {
         margin-bottom: 20px;
-        font-size: 18px;
-        line-height: 22px;
       }
     }
   }
@@ -1200,9 +1203,10 @@
   }
 
   &__advantages-text {
+    font-weight: bold;
     font-size: 15px;
     line-height: 18px;
-    color: #000;
+    color: #022086;
 
     @media (min-width: $lg) {
       order: 0;

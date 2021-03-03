@@ -1410,7 +1410,7 @@ body {
   font-weight: bold;
   font-size: 30px;
   line-height: 36px;
-  color: #022086;
+  color: #152F60;
   text-transform: uppercase; }
   @media (min-width: 992px) {
     .p-home__promo-title {
@@ -2960,7 +2960,7 @@ body {
     margin-top: 35px; }
     @media (min-width: 768px) {
       .advantages-cargo__items {
-        grid-auto-flow: column;
+        grid-template-columns: repeat(2, auto);
         justify-content: space-between;
         row-gap: 0;
         margin-top: 50px; } }
@@ -2977,21 +2977,33 @@ body {
     .advantages-cargo__item {
       position: relative; } }
   @media (min-width: 576px) {
-    .advantages-cargo__item:last-child {
+    .advantages-cargo__item:nth-child(2) {
       margin-left: calc(100% - 325px); } }
   @media (min-width: 768px) {
-    .advantages-cargo__item:last-child {
+    .advantages-cargo__item:nth-child(2) {
       margin-left: 0;
       margin-right: 35px;
       margin-top: 150px; } }
   @media (min-width: 992px) {
-    .advantages-cargo__item:last-child {
+    .advantages-cargo__item:nth-child(2) {
       margin-top: 200px;
       margin-right: 45px; } }
   @media (min-width: 1600px) {
-    .advantages-cargo__item:last-child {
+    .advantages-cargo__item:nth-child(2) {
       margin-top: 400px;
       margin-right: 75px; } }
+  @media (min-width: 768px) {
+    .advantages-cargo__item:nth-child(3) {
+      margin-top: -85px; } }
+  @media (min-width: 992px) {
+    .advantages-cargo__item:nth-child(3) {
+      margin-top: -20px; } }
+  @media (min-width: 1200px) {
+    .advantages-cargo__item:nth-child(3) {
+      margin-top: -30px; } }
+  @media (min-width: 1600px) {
+    .advantages-cargo__item:nth-child(3) {
+      margin-top: -55px; } }
   .advantages-cargo__item-title {
     max-width: 180px;
     margin-bottom: 15px;
@@ -3033,6 +3045,18 @@ body {
   @media (min-width: 1200px) {
     .advantages-cargo__item:nth-child(2) .advantages-cargo__item-title {
       left: -75px; } }
+  @media (min-width: 992px) {
+    .advantages-cargo__item:nth-child(3) .advantages-cargo__item-title {
+      top: 60px;
+      right: -105px; } }
+  @media (min-width: 1200px) {
+    .advantages-cargo__item:nth-child(3) .advantages-cargo__item-title {
+      top: 70px;
+      right: -110px; } }
+  @media (min-width: 1600px) {
+    .advantages-cargo__item:nth-child(3) .advantages-cargo__item-title {
+      top: 130px;
+      right: -175px; } }
   .advantages-cargo__item-picture {
     position: relative;
     width: 295px;
@@ -3074,6 +3098,15 @@ body {
       .advantages-cargo__item-image {
         top: 75px;
         left: 75px; } }
+  @media (min-width: 992px) {
+    .advantages-cargo__item:nth-child(3) .advantages-cargo__item-image {
+      top: -45px;
+      right: -45px;
+      left: auto; } }
+  @media (min-width: 1600px) {
+    .advantages-cargo__item:nth-child(3) .advantages-cargo__item-image {
+      top: -75px;
+      right: -75px; } }
 
 .service-cargo {
   margin-bottom: 35px;
@@ -4386,6 +4419,10 @@ body {
     .p-about-us__desc-text {
       font-size: 16px;
       line-height: 20px; } }
+  @media (min-width: 1600px) {
+    .p-about-us__desc-text {
+      font-size: 18px;
+      line-height: 22px; } }
   .p-about-us__desc-text:not(:last-child) {
     margin-bottom: 10px; }
     @media (min-width: 992px) {
@@ -4393,9 +4430,7 @@ body {
         margin-bottom: 15px; } }
     @media (min-width: 1600px) {
       .p-about-us__desc-text:not(:last-child) {
-        margin-bottom: 20px;
-        font-size: 18px;
-        line-height: 22px; } }
+        margin-bottom: 20px; } }
 
 .p-about-us__desc ul {
   margin: 0;
@@ -5103,9 +5138,10 @@ body {
       justify-self: center; } }
 
 .p-about-us__advantages-text {
+  font-weight: bold;
   font-size: 15px;
   line-height: 18px;
-  color: #000; }
+  color: #022086; }
   @media (min-width: 992px) {
     .p-about-us__advantages-text {
       order: 0;
