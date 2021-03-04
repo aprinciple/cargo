@@ -4809,7 +4809,8 @@ body {
   @media (min-width: 992px) {
     .p-about-us__delivery-items {
       -moz-column-gap: 100px;
-           column-gap: 100px; } }
+           column-gap: 100px;
+      row-gap: 50px; } }
   @media (min-width: 1200px) {
     .p-about-us__delivery-items {
       -moz-column-gap: 130px;
@@ -4817,7 +4818,8 @@ body {
   @media (min-width: 1600px) {
     .p-about-us__delivery-items {
       -moz-column-gap: 230px;
-           column-gap: 230px; } }
+           column-gap: 230px;
+      row-gap: 90px; } }
 
 .p-about-us__delivery-item {
   display: grid;
@@ -4830,23 +4832,23 @@ body {
       padding: 0; } }
   @media (min-width: 992px) {
     .p-about-us__delivery-item {
-      row-gap: 10px; } }
+      row-gap: 25px; } }
   @media (min-width: 1600px) {
     .p-about-us__delivery-item {
-      row-gap: 15px; } }
+      row-gap: 45px; } }
 
 .p-about-us__delivery-item-image {
   justify-self: center;
-  max-width: 87px;
-  max-height: 75px; }
+  max-width: 75px;
+  max-height: 30px; }
   @media (min-width: 992px) {
     .p-about-us__delivery-item-image {
-      max-width: 115px;
-      max-height: 100px; } }
+      max-width: 150px;
+      max-height: 75px; } }
   @media (min-width: 1600px) {
     .p-about-us__delivery-item-image {
-      max-width: 212px;
-      max-height: 185px; } }
+      max-width: 265px;
+      max-height: 165px; } }
 
 .p-about-us__delivery-item-text {
   margin-top: 0;
