@@ -2723,7 +2723,235 @@ body {
     margin-bottom: 50px; } }
 
 .stages {
-  display: none; }
+  position: relative;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  padding-right: 0;
+  background-color: rgba(18, 69, 172, 0.88);
+  background-image: url("../img/bg-stages.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%; }
+  @media (min-width: 576px) {
+    .stages {
+      margin: 0 -18px;
+      padding: 25px 18px; } }
+  @media (min-width: 768px) {
+    .stages {
+      margin: 0 -24px;
+      padding: 25px 24px; } }
+  @media (min-width: 992px) {
+    .stages {
+      margin: 0 -16px;
+      padding: 60px 16px; } }
+  @media (min-width: 1200px) {
+    .stages {
+      margin: 0 -70px;
+      padding: 90px 20px; } }
+  @media (min-width: 1600px) {
+    .stages {
+      margin: 0 -180px;
+      padding: 115px 180px; } }
+  .stages::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 69, 172, 0.88); }
+  .stages__title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 35px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+    text-transform: uppercase; }
+    @media (min-width: 992px) {
+      .stages__title {
+        margin-bottom: 55px;
+        font-size: 36px;
+        line-height: 45px; } }
+  .stages__items {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    -moz-column-gap: 50px;
+         column-gap: 50px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none; }
+    .stages__items::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0; }
+    @media (min-width: 1600px) {
+      .stages__items {
+        -moz-column-gap: 65px;
+             column-gap: 65px; } }
+  .stages__item {
+    position: relative;
+    display: grid;
+    justify-content: start;
+    align-content: start;
+    min-width: 200px; }
+    @media (min-width: 1200px) {
+      .stages__item {
+        grid-template-rows: 165px auto auto; } }
+    @media (min-width: 1600px) {
+      .stages__item {
+        grid-template-rows: 180px auto auto; } }
+    .stages__item::before {
+      content: '';
+      position: absolute;
+      top: 55px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.3);
+      background-image: url("../img/bg-stages-circle.svg");
+      background-size: 24px 24px;
+      background-position: center center;
+      background-repeat: no-repeat; }
+      @media (min-width: 992px) {
+        .stages__item::before {
+          top: 75px; } }
+      @media (min-width: 1200px) {
+        .stages__item::before {
+          top: 110px; } }
+      @media (min-width: 1600px) {
+        .stages__item::before {
+          top: 125px; } }
+    .stages__item::after {
+      content: '';
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: calc(100% + 50px);
+      height: 1px;
+      background-color: #fff; }
+      @media (min-width: 992px) {
+        .stages__item::after {
+          top: 90px; } }
+      @media (min-width: 1200px) {
+        .stages__item::after {
+          top: 125px; } }
+      @media (min-width: 1600px) {
+        .stages__item::after {
+          top: 140px;
+          width: calc(100% + 65px); } }
+  .stages__item:nth-child(1)::after {
+    left: 15px;
+    width: calc(100% + 35px); }
+    @media (min-width: 1600px) {
+      .stages__item:nth-child(1)::after {
+        width: calc(100% + 50px); } }
+  .stages__item:nth-child(5):after {
+    width: 100%; }
+    @media (min-width: 992px) {
+      .stages__item:nth-child(5):after {
+        width: calc(100% - 12px); } }
+    @media (min-width: 1600px) {
+      .stages__item:nth-child(5):after {
+        width: calc(100% - 10px); } }
+  .stages__item-icon {
+    margin-bottom: 50px; }
+    @media (min-width: 992px) {
+      .stages__item-icon {
+        margin-bottom: 80px; } }
+    @media (min-width: 1200px) {
+      .stages__item-icon {
+        align-self: end; } }
+  .stages__item:nth-child(1) .stages__item-icon {
+    width: 131px;
+    height: 45px; }
+    @media (min-width: 1200px) {
+      .stages__item:nth-child(1) .stages__item-icon {
+        width: 160px;
+        height: 55px; } }
+  .stages__item:nth-child(2) .stages__item-icon {
+    width: 33px;
+    height: 44px; }
+    @media (min-width: 1200px) {
+      .stages__item:nth-child(2) .stages__item-icon {
+        width: 69px;
+        height: 80px; } }
+  .stages__item:nth-child(3) .stages__item-icon {
+    width: 46px;
+    height: 47px; }
+    @media (min-width: 1200px) {
+      .stages__item:nth-child(3) .stages__item-icon {
+        width: 80px;
+        height: 81px; } }
+  .stages__item:nth-child(4) .stages__item-icon {
+    width: 48px;
+    height: 47px; }
+    @media (min-width: 1200px) {
+      .stages__item:nth-child(4) .stages__item-icon {
+        width: 83px;
+        height: 81px; } }
+  .stages__item:nth-child(5) .stages__item-icon {
+    width: 47px;
+    height: 43px; }
+    @media (min-width: 1200px) {
+      .stages__item:nth-child(5) .stages__item-icon {
+        width: 80px;
+        height: 72px; } }
+  .stages__item-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff; }
+    @media (min-width: 992px) {
+      .stages__item-title {
+        font-size: 13px;
+        line-height: 17px; } }
+    @media (min-width: 1600px) {
+      .stages__item-title {
+        margin-bottom: 25px;
+        font-size: 16px;
+        line-height: 19px; } }
+  .stages__item-text {
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff; }
+    @media (min-width: 992px) {
+      .stages__item-text {
+        line-height: 18px; } }
+    @media (min-width: 1600px) {
+      .stages__item-text {
+        font-size: 14px; } }
+  .stages__item-gap {
+    position: relative;
+    min-width: 0.01em; }
+    .stages__item-gap::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      width: 40px;
+      height: 41px;
+      background-image: url("../img/stages-icon-hand.svg");
+      background-size: 100% 100%;
+      background-repeat: no-repeat; }
+      @media (min-width: 992px) {
+        .stages__item-gap::after {
+          top: 50px;
+          width: 54px;
+          height: 55px; } }
+      @media (min-width: 1200px) {
+        .stages__item-gap::after {
+          top: 85px; } }
+      @media (min-width: 1600px) {
+        .stages__item-gap::after {
+          top: 90px;
+          width: 68px;
+          height: 70px; } }
 
 .types-cargo {
   margin-bottom: 35px;

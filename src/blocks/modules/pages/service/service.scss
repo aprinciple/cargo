@@ -318,7 +318,300 @@
 }
 
 .stages {
-  display: none;
+  position: relative;
+  margin: 0 -15px;
+  padding: 25px 15px;
+  padding-right: 0;
+  background-color: rgba(18, 69, 172, 0.88);
+  background-image: url('../img/bg-stages.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  // background-size: cover;
+
+  @media (min-width: $sm) {
+    margin: 0 -18px;
+    padding: 25px 18px;
+  }
+
+  @media (min-width: $md) {
+    margin: 0 -24px;
+    padding: 25px 24px;
+  }
+
+  @media (min-width: $lg) {
+    margin: 0 -16px;
+    padding: 60px 16px;
+  }
+
+  @media (min-width: $xl) {
+    margin: 0 -70px;
+    padding: 90px 20px;
+  }
+
+  @media (min-width: $xxl) {
+    margin: 0 -180px;
+    padding: 115px 180px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(18, 69, 172, 0.88);
+  }
+
+  &__title {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 35px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+    text-transform: uppercase;
+
+    @media (min-width: $lg) {
+      margin-bottom: 55px;
+      font-size: 36px;
+      line-height: 45px;
+    }
+  }
+
+  &__items {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-auto-flow: column;
+    overflow-x: auto;
+    column-gap: 50px;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+      width: 0;
+      height: 0;
+    }
+
+    @media (min-width: $xxl) {
+      column-gap: 65px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: grid;
+    justify-content: start;
+    align-content: start;
+    min-width: 200px;
+
+    @media (min-width: $xl) {
+      grid-template-rows: 165px auto auto;
+    }
+
+    @media (min-width: $xxl) {
+      grid-template-rows: 180px auto auto;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 55px;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.30);
+      background-image: url('../img/bg-stages-circle.svg');
+      background-size: 24px 24px;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      @media (min-width: $lg) {
+        top: 75px;
+      }
+
+      @media (min-width: $xl) {
+        top: 110px;
+      }
+
+      @media (min-width: $xxl) {
+        top: 125px;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 70px;
+      left: 0;
+      width: calc(100% + 50px);
+      height: 1px;
+      background-color: #fff;
+
+      @media (min-width: $lg) {
+        top: 90px;
+      }
+
+      @media (min-width: $xl) {
+        top: 125px;
+      }
+
+      @media (min-width: $xxl) {
+        top: 140px;
+        width: calc(100% + 65px);
+      }
+    }
+  }
+
+  &__item:nth-child(1)::after {
+    left: 15px;
+    width: calc(100% + 35px);
+
+    @media (min-width: $xxl) {
+      width: calc(100% + 50px);
+    }
+  }
+
+  &__item:nth-child(5):after {
+    width: 100%;
+
+    @media (min-width: $lg) {
+      width: calc(100% - 12px);
+    }
+
+    @media (min-width: $xxl) {
+      width: calc(100% - 10px);
+    }
+  }
+
+  &__item-icon {
+    margin-bottom: 50px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: $xl) {
+      align-self: end;
+    }
+  }
+
+  &__item:nth-child(1) &__item-icon {
+    width: 131px;
+    height: 45px;
+
+    @media (min-width: $xl) {
+      width: 160px;
+      height: 55px;
+    }
+  }
+  &__item:nth-child(2) &__item-icon {
+    width: 33px;
+    height: 44px;
+
+    @media (min-width: $xl) {
+      width: 69px;
+      height: 80px;
+    }
+  }
+  &__item:nth-child(3) &__item-icon {
+    width: 46px;
+    height: 47px;
+
+    @media (min-width: $xl) {
+      width: 80px;
+      height: 81px;
+    }
+  }
+  &__item:nth-child(4) &__item-icon {
+    width: 48px;
+    height: 47px;
+
+    @media (min-width: $xl) {
+      width: 83px;
+      height: 81px;
+    }
+  }
+  &__item:nth-child(5) &__item-icon {
+    width: 47px;
+    height: 43px;
+
+    @media (min-width: $xl) {
+      width: 80px;
+      height: 72px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #fff;
+
+    @media (min-width: $lg) {
+      font-size: 13px;
+      line-height: 17px;
+    }
+
+    @media (min-width: $xxl) {
+      margin-bottom: 25px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+  }
+
+  &__item-text {
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+
+    @media (min-width: $lg) {
+      line-height: 18px;
+    }
+
+    @media (min-width: $xxl) {
+      font-size: 14px;
+    }
+  }
+
+  &__item-gap {
+    position: relative;
+    min-width: 0.01em;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 40px;
+      right: 10px;
+      width: 40px;
+      height: 41px;
+      background-image: url('../img/stages-icon-hand.svg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+
+      @media (min-width: $lg) {
+        top: 50px;
+        width: 54px;
+        height: 55px;
+      }
+
+      @media (min-width: $xl) {
+        top: 85px;
+      }
+
+      @media (min-width: $xxl) {
+        top: 90px;
+        width: 68px;
+        height: 70px;
+      }
+    }
+  }
 }
 
 .types-cargo {
