@@ -284,6 +284,14 @@
   }
 
   &__stages {
+
+    @media (min-width: $lg) {
+      margin: 30px 0;
+    }
+
+    @media (min-width: $xxl) {
+      margin: 100px 0;
+    }
   }
 
   &__request {
@@ -319,7 +327,8 @@
 
 .stages {
   position: relative;
-  margin: 0 -15px;
+  margin-left: -15px;
+  margin-right: -15px;
   padding: 25px 15px;
   padding-right: 0;
   background-color: rgba(18, 69, 172, 0.88);
@@ -329,27 +338,32 @@
   // background-size: cover;
 
   @media (min-width: $sm) {
-    margin: 0 -18px;
+    margin-left: -18px;
+    margin-right: -18px;
     padding: 25px 18px;
   }
 
   @media (min-width: $md) {
-    margin: 0 -24px;
+    margin-left: -24px;
+    margin-right: -24px;
     padding: 25px 24px;
   }
 
   @media (min-width: $lg) {
-    margin: 0 -16px;
+    margin-left: -16px;
+    margin-right: -16px;
     padding: 60px 16px;
   }
 
   @media (min-width: $xl) {
-    margin: 0 -70px;
+    margin-left: -70px;
+    margin-right: -70px;
     padding: 90px 20px;
   }
 
   @media (min-width: $xxl) {
-    margin: 0 -180px;
+    margin-left: -180px;
+    margin-right: -180px;
     padding: 115px 180px;
   }
 
