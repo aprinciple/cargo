@@ -11,24 +11,6 @@
     $weight    = htmlspecialchars( trim( $_POST["weight"] ) );
     $size      = htmlspecialchars( trim( $_POST["size"] ) );
 
-    // foreach($_POST['services'] as $item) {
-    //   $services .= $item. ', ';
-    // }
-
-
-    // define('SITE_KEY', '6LdseuEUAAAAALw4N6MPyKyYlZLfl9R7FH9DR84T');
-    // define('SECRET_KEY', '6LdseuEUAAAAAE-4s0FIvMe7bpcqUr4GDMvitwij');
-
-    // function getCaptcha($secretKey) {
-    //   $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret="."6LdseuEUAAAAAE-4s0FIvMe7bpcqUr4GDMvitwij"."&response={$secretKey}");
-    //   $return = json_decode($response);
-    //   return $return;
-    // }
-
-    // $return = getCaptcha($_POST['g-recaptcha-response-ask']);
-
-    // if($return->success == true && $return->score > 0.5) {
-    // }
     $to = 'avprinciple@gmail.com';
     $from = 'info@cargoin.ru';
     $subject = 'Заявка';
@@ -50,5 +32,18 @@
       'Reply-To' => $from
     );
 
-    mail($to, $subject, $message, $headers);
+    define('SITE_KEY', '6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a');
+    define('SECRET_KEY', '6LdPznEaAAAAAC4wfvEtBXqCpkWdUIdCfMiOzzuq');
+
+    function getCaptcha($secretKey) {
+      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret="."6LdPznEaAAAAAC4wfvEtBXqCpkWdUIdCfMiOzzuq"."&response={$secretKey}");
+      $return = json_decode($response);
+      return $return;
+    }
+
+    $return = getCaptcha($_POST['g-recaptcha-response-request']);
+
+    if($return->success == true && $return->score > 0.5) {
+      mail($to, $subject, $message, $headers);
+    }
   }

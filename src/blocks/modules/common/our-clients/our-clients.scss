@@ -78,9 +78,11 @@
   }
 
   &__item {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 70px;
+    padding: 20px;
     background-color: #fff;
     transition: transform 0.3s;
     // -webkit-font-smoothing: subpixel-antialiased;
@@ -101,9 +103,13 @@
     &:hover {
       transform: scale(1.05);
     }
+
+    &:last-child {
+      box-shadow: 1px 1px 0 1px #fff;
+    }
   }
 
   &__image {
-    margin: 20px;
+    object-fit: cover;
   }
 }

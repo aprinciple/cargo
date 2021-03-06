@@ -399,5 +399,16 @@
     @@include('../../common/footer/footer.html')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
     <script src="js/script.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a"></script>
+    <script>
+      grecaptcha.ready(function() {
+        grecaptcha.execute('6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a', {
+            action: 'request'
+          })
+          .then(function(token) {
+            document.getElementById('g-recaptcha-response-request').value = token;
+          });
+      });
+    </script>
   </body>
 </html>

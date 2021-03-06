@@ -1216,9 +1216,11 @@ body {
       grid-column: 2 / 3; } }
 
 .our-clients__item {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 70px;
+  padding: 20px;
   background-color: #fff;
   transition: transform 0.3s;
   transform: translateZ(0); }
@@ -1233,9 +1235,12 @@ body {
       height: 175px; } }
   .our-clients__item:hover {
     transform: scale(1.05); }
+  .our-clients__item:last-child {
+    box-shadow: 1px 1px 0 1px #fff; }
 
 .our-clients__image {
-  margin: 20px; }
+  -o-object-fit: cover;
+     object-fit: cover; }
 
 .our-record__title {
   margin-bottom: 10px;
@@ -5439,10 +5444,12 @@ body {
            column-gap: 40px;
       padding-bottom: 180px; } }
   .certificates__item {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     min-width: 290px;
     height: 350px;
+    padding: 15px;
     background-color: #fff;
     box-shadow: -5px 6px 20px rgba(0, 13, 48, 0.07); }
     @media (min-width: 992px) {
@@ -5462,7 +5469,8 @@ body {
       .certificates__cap {
         display: none; } }
   .certificates__image {
-    margin: 30px; }
+    -o-object-fit: cover;
+       object-fit: cover; }
 
 .p-contacts__main {
   padding: 45px 0; }

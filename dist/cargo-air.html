@@ -177,9 +177,7 @@
               Предварительное согласование
             </h6>
             <p class="types-cargo__item-text">
-              Пожалуйста, ознакомьтесь со <a href="#">списком грузов</a>, не
-              принимаемых к авиаперевозке, и грузов, перевозка которых
-              подлежит предварительному согласованию.
+              Пожалуйста, ознакомьтесь со <a href="#">списком грузов</a>, перевозка которых подлежит предварительному согласованию. Если ваш груз относится к этой категории, заведомо предупредите сотрудника компании и мы проведем все процедуры по согласованию.
             </p>
           </div>
           <div class="types-cargo__item">
@@ -485,6 +483,7 @@
                 Нажимая кнопку «Отправить» Вы даете согласие на обработку персональных
                 данных
               </p>
+              <input type="hidden" id="g-recaptcha-response-request" name="g-recaptcha-response-request">
               <span class="form__notification"></span>
               <button type="submit" class="form__button request__form-submit">
                 Отправить
@@ -570,6 +569,17 @@
   </footer>
 
   <script src="js/script.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a"></script>
+  <script>
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a', {
+          action: 'request'
+        })
+        .then(function(token) {
+          document.getElementById('g-recaptcha-response-request').value = token;
+        });
+    });
+  </script>
 </body>
 
 </html>

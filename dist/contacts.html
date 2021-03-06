@@ -91,6 +91,7 @@
             Нажимая кнопку «Отправить» Вы даете согласие на обработку персональных данных
           </p>
           <span class="form__notification"></span>
+          <input type="hidden" id="g-recaptcha-response-ask" name="g-recaptcha-response-ask">
           <button type="submit" class="button form__button">Отправить</button>
         </form>
         <div class="contact">
@@ -162,6 +163,17 @@
   </footer>
 
   <script src="js/script.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a"></script>
+  <script>
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a', {
+          action: 'request'
+        })
+        .then(function(token) {
+          document.getElementById('g-recaptcha-response-request').value = token;
+        });
+    });
+  </script>
 </body>
 
 </html>

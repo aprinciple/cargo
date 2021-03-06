@@ -268,19 +268,23 @@
         <h2 class="p-about-us__certificates-title">Сертификаты</h2>
         <div class="certificates">
           <div class="certificates__item">
-            <img class="certificates__image" src="img/logo.svg" alt="Сертификат" />
+            <img class="certificates__image" src="img/certificates-item-1.jpg" alt="Сертификат" />
           </div>
           <div class="certificates__item">
-            <img class="certificates__image" src="img/logo.svg" alt="Сертификат" />
+            <img class="certificates__image" src="img/certificates-item-2.jpg" alt="Сертификат" />
           </div>
           <div class="certificates__item">
-            <img class="certificates__image" src="img/logo.svg" alt="Сертификат" />
+            <img class="certificates__image" src="img/certificates-item-3.jpg" alt="Сертификат" />
           </div>
           <div class="certificates__item">
-            <img class="certificates__image" src="img/logo.svg" alt="Сертификат" />
+            <img class="certificates__image" src="img/certificates-item-4.jpg" alt="Сертификат" />
           </div>
           <div class="certificates__item">
-            <img class="certificates__image" src="img/logo.svg" alt="Сертификат" />
+            <!-- <img
+                class="certificates__image"
+                src="img/certificates-item-1.jpg"
+                alt="Сертификат"
+              /> -->
           </div>
           <span class="certificates__cap"></span>
         </div>
@@ -437,6 +441,7 @@
                 Нажимая кнопку «Отправить» Вы даете согласие на обработку персональных
                 данных
               </p>
+              <input type="hidden" id="g-recaptcha-response-request" name="g-recaptcha-response-request">
               <span class="form__notification"></span>
               <button type="submit" class="form__button request__form-submit">
                 Отправить
@@ -522,6 +527,17 @@
   </footer>
 
   <script src="js/script.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a"></script>
+  <script>
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a', {
+          action: 'request'
+        })
+        .then(function(token) {
+          document.getElementById('g-recaptcha-response-request').value = token;
+        });
+    });
+  </script>
 </body>
 
 </html>

@@ -227,31 +227,31 @@
           </p>
           <div class="our-clients__items">
             <a class="our-clients__item" href="#">
-              <img class="our-clients__image" src="img/logo.svg" alt="Партнёр" />
+              <img class="our-clients__image" src="img/our-clients-item-1.jpg" alt="Партнёр" />
             </a>
             <a class="our-clients__item" href="#">
-              <img class="our-clients__image" src="img/logo.svg" alt="Партнёр" />
+              <img class="our-clients__image" src="img/our-clients-item-2.jpg" alt="Партнёр" />
             </a>
             <a class="our-clients__item" href="#">
-              <img class="our-clients__image" src="img/logo.svg" alt="Партнёр" />
+              <img class="our-clients__image" src="img/our-clients-item-3.jpg" alt="Партнёр" />
             </a>
             <a class="our-clients__item" href="#">
-              <img class="our-clients__image" src="img/logo.svg" alt="Партнёр" />
+              <img class="our-clients__image" src="img/our-clients-item-4.jpg" alt="Партнёр" />
             </a>
             <a class="our-clients__item" href="#">
-              <img class="our-clients__image" src="img/logo.svg" alt="Партнёр" />
+              <img class="our-clients__image" src="img/our-clients-item-5.png" alt="Партнёр" />
             </a>
             <a class="our-clients__item" href="#">
-              <img class="our-clients__image" src="img/logo.svg" alt="Партнёр" />
+              <img class="our-clients__image" src="img/our-clients-item-6.png" alt="Партнёр" />
             </a>
             <a class="our-clients__item" href="#">
-              <img class="our-clients__image" src="img/logo.svg" alt="Партнёр" />
+              <img class="our-clients__image" src="img/our-clients-item-7.png" alt="Партнёр" />
             </a>
             <a class="our-clients__item" href="#">
-              <img class="our-clients__image" src="img/logo.svg" alt="Партнёр" />
+              <img class="our-clients__image" src="img/our-clients-item-8.png" alt="Партнёр" />
             </a>
             <a class="our-clients__item" href="#">
-              <img class="our-clients__image" src="img/logo.svg" alt="Партнёр" />
+              <!-- <img class="our-clients__image" src="img/our-clients-item-1.jpg" alt="Партнёр" /> -->
             </a>
           </div>
         </div>
@@ -372,6 +372,7 @@
                 Нажимая кнопку «Отправить» Вы даете согласие на обработку персональных
                 данных
               </p>
+              <input type="hidden" id="g-recaptcha-response-request" name="g-recaptcha-response-request">
               <span class="form__notification"></span>
               <button type="submit" class="form__button request__form-submit">
                 Отправить
@@ -457,6 +458,17 @@
   </footer>
 
   <script src="js/script.min.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a"></script>
+  <script>
+    grecaptcha.ready(function() {
+      grecaptcha.execute('6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a', {
+          action: 'request'
+        })
+        .then(function(token) {
+          document.getElementById('g-recaptcha-response-request').value = token;
+        });
+    });
+  </script>
 </body>
 
 </html>

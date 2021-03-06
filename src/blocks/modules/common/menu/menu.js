@@ -29,6 +29,13 @@ if (menu) {
         toggle.addEventListener("click", (e) => {
           e.preventDefault();
           e.target.classList.toggle("menu__toggle-sublist--active");
+
+          document.addEventListener('click', (e) => {
+            if(!e.target.closest('ul')) {
+              // let sublist = document.querySelector('.menu__toggle-sublist--active');
+              toggle.classList.remove('menu__toggle-sublist--active');
+            }
+          });
         });
       });
       // togglesSublist.forEach(toggle => {

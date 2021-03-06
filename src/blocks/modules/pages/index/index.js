@@ -7,7 +7,10 @@ if (homeSlider) {
   let slider = tns({
     'container': homeSlider.querySelector('.home-slider__items'),
     'items': 1,
-    "controlsContainer": false,
+    'autoplay': true,
+    'autoplayTimeout': 3500,
+    'autoplayButtonOutput': false,
+    'controlsContainer': false,
     'navContainer': homeSlider.querySelector('.home-slider__thumbnails'),
     'navAsThumbnails': true,
     'swipeAngle': false,
