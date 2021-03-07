@@ -88,3 +88,7 @@ body {
     }
   }
 }
+
+.grecaptcha-badge {
+  @include hidden;
+}

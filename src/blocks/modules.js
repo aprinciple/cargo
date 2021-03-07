@@ -12,3 +12,4 @@ import '../blocks/modules/common/our-record/our-record';
 // Pages
 import '../blocks/modules/pages/index/index';
 import '../blocks/modules/pages/service/service';
+import '../blocks/modules/pages/about-us/about-us';

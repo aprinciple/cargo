@@ -1224,7 +1224,6 @@
 }
 
 .certificates {
-  position: relative;
   display: grid;
   grid-auto-flow: column;
   column-gap: 22px;
@@ -1303,5 +1302,55 @@
 
   &__image {
     object-fit: cover;
+  }
+}
+
+.certificates__item {
+  position: relative;
+}
+
+.box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  padding: 15px;
+  max-width: 90vw;
+  max-height: 90vh;
+  animation: scale-up-center-box 0.3s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.box img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.box__button {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url('../img/close.svg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  outline: none;
+
+  @media (min-width: $md) {
+    top: 0;
+    right: -30px;
+  }
+}
+
+
+@keyframes scale-up-center-box {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
   }
 }

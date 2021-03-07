@@ -167,6 +167,16 @@ body {
     .button--yellow:hover {
       background-color: #dbc95c; }
 
+.grecaptcha-badge {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden; }
+
 /**
  * ----------------------------------------
  * animation fade-in
@@ -5402,7 +5412,6 @@ body {
       line-height: 24px; } }
 
 .certificates {
-  position: relative;
   display: grid;
   grid-auto-flow: column;
   -moz-column-gap: 22px;
@@ -5471,6 +5480,54 @@ body {
   .certificates__image {
     -o-object-fit: cover;
        object-fit: cover; }
+
+.certificates__item {
+  position: relative; }
+
+.box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  padding: 15px;
+  max-width: 90vw;
+  max-height: 90vh;
+  -webkit-animation: scale-up-center-box 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: scale-up-center-box 0.3s cubic-bezier(0.39, 0.575, 0.565, 1) both; }
+
+.box img {
+  max-width: 90vw;
+  max-height: 90vh; }
+
+.box__button {
+  position: absolute;
+  top: -30px;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/close.svg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  outline: none; }
+  @media (min-width: 768px) {
+    .box__button {
+      top: 0;
+      right: -30px; } }
+
+@-webkit-keyframes scale-up-center-box {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5); }
+  100% {
+    transform: translate(-50%, -50%) scale(1); } }
+
+@keyframes scale-up-center-box {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5); }
+  100% {
+    transform: translate(-50%, -50%) scale(1); } }
 
 .p-contacts__main {
   padding: 45px 0; }

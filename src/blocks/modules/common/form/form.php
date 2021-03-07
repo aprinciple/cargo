@@ -17,10 +17,10 @@
     );
 
     define('SITE_KEY', '6LdPznEaAAAAANnpiWIdk0ZXrX2Hy55ChAb2uz5a');
-    define('SECRET_KEY', '6LdPznEaAAAAAC4wfvEtBXqCpkWdUIdCfMiOzzuq');
+    define('SECRET_KEY', '');
 
     function getCaptcha($secretKey) {
-      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret="."6LdPznEaAAAAAC4wfvEtBXqCpkWdUIdCfMiOzzuq"."&response={$secretKey}");
+      $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret="."KEY"."&response={$secretKey}");
       $return = json_decode($response);
       return $return;
     }
