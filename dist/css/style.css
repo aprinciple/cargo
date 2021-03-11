@@ -4649,22 +4649,22 @@ body {
       height: 880px;
       margin-right: -180px; } }
 
-.p-about-us__promo-image {
+.p-about-us__promo-image, .p-about-us__promo-video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover; }
   @media (min-width: 768px) {
-    .p-about-us__promo-image {
+    .p-about-us__promo-image, .p-about-us__promo-video {
       height: calc(100% + 40px); } }
   @media (min-width: 992px) {
-    .p-about-us__promo-image {
+    .p-about-us__promo-image, .p-about-us__promo-video {
       height: calc(100% + 55px); } }
   @media (min-width: 1200px) {
-    .p-about-us__promo-image {
+    .p-about-us__promo-image, .p-about-us__promo-video {
       height: calc(100% + 43px); } }
   @media (min-width: 1600px) {
-    .p-about-us__promo-image {
+    .p-about-us__promo-image, .p-about-us__promo-video {
       height: calc(100% + 65px); } }
 
 .p-about-us__desc {
