@@ -703,7 +703,7 @@
   }
 
   &__offices-item-text {
-    margin-bottom: 25px;
+    margin-bottom: 10px;
     font-size: 16px;
     line-height: 18px;
     color: #fff;
@@ -720,6 +720,7 @@
 
   &__offices-item-link {
     justify-self: end;
+    margin-top: 15px;
     font-size: 16px;
     line-height: 18px;
     color: #fff;
@@ -730,6 +731,10 @@
       align-self: end;
     }
 
+    @media (min-width: $lg) {
+      margin-top: 0;
+    }
+
     @media (min-width: $xxl) {
       font-size: 26px;
       line-height: 32px;
@@ -738,6 +743,11 @@
     &:hover {
       color: $yellow;
     }
+  }
+
+  &__offices-item a {
+    color: #fff;
+    text-decoration: none;
   }
 
   &__delivery {

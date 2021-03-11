@@ -4973,7 +4973,7 @@ body {
       line-height: 58px; } }
 
 .p-about-us__offices-item-text {
-  margin-bottom: 25px;
+  margin-bottom: 10px;
   font-size: 16px;
   line-height: 18px;
   color: #fff; }
@@ -4987,6 +4987,7 @@ body {
 
 .p-about-us__offices-item-link {
   justify-self: end;
+  margin-top: 15px;
   font-size: 16px;
   line-height: 18px;
   color: #fff;
@@ -4995,12 +4996,19 @@ body {
   @media (min-width: 576px) {
     .p-about-us__offices-item-link {
       align-self: end; } }
+  @media (min-width: 992px) {
+    .p-about-us__offices-item-link {
+      margin-top: 0; } }
   @media (min-width: 1600px) {
     .p-about-us__offices-item-link {
       font-size: 26px;
       line-height: 32px; } }
   .p-about-us__offices-item-link:hover {
     color: #D6C247; }
+
+.p-about-us__offices-item a {
+  color: #fff;
+  text-decoration: none; }
 
 .p-about-us__delivery {
   padding: 40px 0; }
