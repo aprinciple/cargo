@@ -15,7 +15,7 @@ if (itemsTypesCargo) {
 }
 
 const showListCargo = document.querySelectorAll('.show-list-cargo');
-if (showListCargo) {
+if (showListCargo.length > 0) {
   const list = document.querySelector('.types-cargo__list-cargo');
   const close = list.querySelector('.types-cargo__list-cargo-close');
 
